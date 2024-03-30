@@ -10,6 +10,8 @@ def object_post_delete_handler(sender, **kwargs):
      cache.delete('book')
 
 
+
 @receiver(post_save, sender=Product, dispatch_uid='posts_updated')
 def object_post_save_handler(sender, **kwargs):
     cache.delete('book')
+
